@@ -4,4 +4,4 @@
 Square などで支払いを受けるとき、
 手数料を引いてちょうど目的の金額になるように請求額を計算します。
 
-http://komi.msng.info
+http://komi.msng.info/

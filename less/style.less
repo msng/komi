@@ -1,0 +1,197 @@
+// Variables Config
+@width: 320px;
+@bgColor: #F5F5F5;
+@fontColor: #333;
+@gray: #666;
+@fontSize: 16px;
+@linkColor: #33F;
+@pBottom: 24px;	//Bottom spacing for paragraphs
+
+/// Header
+@headerHeight: auto;
+@headerTopSpacing: 10px;
+@headerBottomSpacing: 20px;
+
+/// Main
+@mainHSpacing: 10px;	//Horizontal spacing for main part
+
+/// Footer
+@widgetMargin: 15px;
+@widgetMaxHeight: 68px;
+@aboutLines: 1;
+@aboutBottomSpacing: 20px;
+@footerBottomSpacing: 10px;
+
+
+// Prepared Variables
+@aboutHeight: @fontSize * @aboutLines;
+@footerHeight: @aboutHeight + @aboutBottomSpacing + @widgetMaxHeight + @footerBottomSpacing;
+
+// Layout
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background-color: @bgColor;
+	color: @fontColor;
+	font-size: @fontSize;
+}
+
+html, body {
+	height: 100%;
+}
+
+#container {
+	min-height: 100%;
+	max-width: @width;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#main {
+	padding: 0 @mainHSpacing (@footerHeight + 25px);
+	overflow: hidden;
+}
+
+#methods a {
+	overflow: hidden;
+}
+
+#methods a:link {
+	background-color: #FFF;
+}
+
+#methods dt {
+	float: left;
+	font-weight: normal;
+}
+
+#methods dd {
+	float: right;
+	font-size: 12px;
+	color: @gray;
+}
+
+#calc {
+	display: none;
+}
+
+#method-name {
+	overflow: hidden;
+	padding-right: 14px;
+}
+
+#change {
+	float: right;
+}
+
+#calc input {
+	text-align: right;
+}
+
+.submit {
+	text-align: center;
+}
+
+#result {
+	display: none;
+	overflow: hidden;
+	background-color: #FFF;
+}
+
+#result h3 {
+	margin :0;
+	line-height: 1;
+}
+
+#result small {
+	white-space: nowrap;
+}
+
+#footer {
+	position: relative;
+	margin-top: -@footerHeight;
+	margin-left: auto;
+	margin-right: auto;
+	height: @footerHeight;
+	clear: both;
+	text-align: center;
+	overflow: hidden;
+}
+
+// Elements
+h1 {
+	padding: @headerTopSpacing 0 @headerBottomSpacing;
+	text-align: center;
+	height: @headerHeight;
+}
+
+p {
+	padding-bottom: @pBottom;
+}
+
+input {
+	font-size: @fontSize;
+}
+
+img {
+	width: 100%;
+	max-width: @width;
+}
+
+a {
+	color: @linkColor;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+//Classes
+.nowrap {
+	white-space: nowrap;
+}
+
+.monospace {
+	font-family: monospace;
+}
+
+//Header
+h1 a img {
+	display: block;
+}
+
+
+//Footer
+#about {
+	clear: both;
+	padding-bottom: 20px;
+	text-align: center;
+	line-height: 1;
+}
+
+// Footer widgets
+#widgets {
+	position: relative;
+	left: 50%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#widgets > li {
+	position: relative;
+	left: -50%;
+	float: left;
+	margin-left: @widgetMargin;
+}
+
+#widgets > li:first-child {
+	margin-left: 0;
+}
+
